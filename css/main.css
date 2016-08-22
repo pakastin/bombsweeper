@@ -13,6 +13,7 @@ body {
   background-color: #ddd;
   font-family: sans-serif;
   box-sizing: border-box;
+  color: #444;
   tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -moz-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -86,7 +87,6 @@ td {
   -ms-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, .15), inset 1px 1px 0 #fff;
   -o-box-shadow: inset -1px -1px 0 rgba(0, 0, 0, .15), inset 1px 1px 0 #fff;
   text-align: center;
-  color: #444;
   margin: 0;
   padding: 0;
 }
