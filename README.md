@@ -1,4 +1,4 @@
 # Bombsweeper
 VanillaJS bombsweeper!
 
-https://pakastin.github.io/bombsweeper
+https://bombsweeper.js.org
