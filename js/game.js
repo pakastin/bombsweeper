@@ -94,7 +94,7 @@ function createGame (grid, cells) {
     });
 
     $scoreleft.textContent = 'Bombs: ' + bombs;
-    $scoreright.textContent = 'Points: ' + points;
+    $scoreright.textContent = 'Score: ' + points;
 
     if (openable === bombs) {
       $scoreleft.textContent = 'WIN!';
