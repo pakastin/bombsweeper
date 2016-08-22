@@ -2,13 +2,13 @@
 start();
 
 window.addEventListener('hashchange', function () {
-  while (document.body.firstChild) {
-    document.body.removeChild(document.body.firstChild);
-  }
   start();
 });
 
 function start () {
+  while (document.body.firstChild) {
+    document.body.removeChild(document.body.firstChild);
+  }
   var hash = location.hash.slice(1).split(',');
   var ROWS = parseInt(hash[0]) || 10;
   var COLS = parseInt(hash[1]) || 10;
