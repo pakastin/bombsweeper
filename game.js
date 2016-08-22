@@ -93,7 +93,7 @@ function createGame (grid, cells) {
       }
     });
 
-    $scoreleft.textContent = 'Mines: ' + bombs;
+    $scoreleft.textContent = 'Bombs: ' + bombs;
     $scoreright.textContent = 'Points: ' + points;
 
     if (openable === bombs) {
