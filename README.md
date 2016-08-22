@@ -1,6 +1,5 @@
 # Bombsweeper
-VanillaJS bombsweeper!
+VanillaJS bombsweeper (minesweeper)!
 
 https://bombsweeper.js.org
 
-btw. minesweeper.js.org was taken :/
