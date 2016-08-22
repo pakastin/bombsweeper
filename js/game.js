@@ -100,6 +100,9 @@ function createGame (grid, cells) {
       $scoreleft.textContent = 'WIN!';
       $game.oncontextmenu = null;
       $game.onclick = null;
+      $cells.forEach(function ($cell) {
+        $cell.classList.add('gameover');
+      });
     } else if (gameover) {
       $cells.forEach(function ($cell) {
         $cell.classList.add('gameover');
