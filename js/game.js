@@ -98,6 +98,8 @@ function createGame (grid, cells) {
 
     if (openable === bombs) {
       $scoreleft.textContent = 'WIN!';
+      $game.oncontextmenu = null;
+      $game.onclick = null;
     } else if (gameover) {
       $cells.forEach(function ($cell) {
         $cell.classList.add('gameover');
