@@ -10,8 +10,8 @@ window.addEventListener('hashchange', function () {
 
 function start () {
   var hash = location.hash.slice(1).split(',');
-  var ROWS = parseInt(hash[0]) || 9;
-  var COLS = parseInt(hash[1]) || 9;
+  var ROWS = parseInt(hash[0]) || 10;
+  var COLS = parseInt(hash[1]) || 10;
   var BOMBS = parseInt(hash[2]) || 10;
 
   var bombs = generateBombs(ROWS, COLS, BOMBS);

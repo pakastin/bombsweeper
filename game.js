@@ -5,7 +5,8 @@ function createGame (grid, cells) {
   var $score = document.createElement('p');
   var $scoreleft = document.createElement('span');
   var $scoreright = document.createElement('span');
-  var $newgame = document.createElement('p');
+  var $newgame = document.createElement('div');
+  var $levels = document.createElement('span');
   var $table = createTable(grid);
   var $cells = $table.querySelectorAll('td');
   var $ps = $table.querySelectorAll('td > p');
@@ -17,6 +18,8 @@ function createGame (grid, cells) {
   $score.classList.add('score');
   $newgame.classList.add('newgame');
 
+  $newgame.innerHTML = '<a href="#10,10,10">💣</a><a href="#15,15,40">💣💣</a><a href="#25,25,100">💣💣💣</a>';
+
   $score.appendChild($scoreleft);
   $score.appendChild($scoreright);
 
@@ -27,19 +30,14 @@ function createGame (grid, cells) {
   $container.classList.add('container');
   $container.appendChild($table);
 
-  $newgame.textContent = 'New game?';
-  $newgame.onclick = function () {
-    location.reload();
-  }
-
   $game.oncontextmenu = function (e) {
-    e.preventDefault();
-
     var cell = e.cell;
 
     if (!cell) {
       return;
     }
+    e.preventDefault();
+
     cell.flag();
     update();
   }
@@ -103,7 +101,7 @@ function createGame (grid, cells) {
       }
     });
 
-    $scoreleft.textContent = 'Bombs: ' + bombs;
+    $scoreleft.textContent = 'Mines: ' + bombs;
     $scoreright.textContent = 'Points: ' + points;
 
     if (openable === bombs) {

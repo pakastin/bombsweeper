@@ -45,10 +45,14 @@ body {
   text-transform: uppercase;
   font-weight: 600;
   text-align: center;
-  cursor: pointer;
 }
 
-.game .newgame:hover {
+.game .newgame a {
+  padding: 0 .5rem;
+  text-decoration: none;
+}
+
+.game .newgame a:hover {
   text-decoration: underline;
 }
 
