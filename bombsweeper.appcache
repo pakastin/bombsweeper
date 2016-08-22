@@ -1,0 +1,15 @@
+CACHE MANIFEST
+# 2016-08-22 21:32:00
+
+CACHE:
+index.html
+css/main.css
+js/el.js
+js/data.js
+js/table.js
+js/cell.js
+js/game.js
+js/main.js
+
+NETWORK:
+*
