@@ -11,9 +11,7 @@ function generateBombs (ROWS, COLS, BOMBS) {
     }
   }
 
-  bombs.sort(function () {
-    return Math.random() - .5
-  });
+  randomize(bombs);
 
   return bombs;
 }
@@ -113,4 +111,17 @@ function generateGrid (ROWS, COLS, bombs) {
       }
     });
   }
+}
+
+function randomize (array) {
+  var rnd, temp
+
+  for (var i = array.length - 1; i; i--) {
+    rnd = Math.random() * i | 0
+    temp = array[i]
+    array[i] = array[rnd]
+    array[rnd] = temp
+  }
+
+  return array
 }
