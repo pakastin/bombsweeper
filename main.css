@@ -96,3 +96,7 @@ td.opened {
 td.bomb {
   content: '💣';
 }
+
+.source {
+  padding: .5rem;
+}
