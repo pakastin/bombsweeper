@@ -1,7 +1,7 @@
 
 function createCell (cell) {
-  var $cell = document.createElement('td');
-  var $p = document.createElement('p');
+  var $cell = el('td');
+  var $p = el('p');
 
   $cell.appendChild($p);
 

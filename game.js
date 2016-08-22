@@ -1,22 +1,15 @@
 
 function createGame (grid, cells) {
-  var $game = document.createElement('div');
-  var $container = document.createElement('div');
-  var $score = document.createElement('p');
-  var $scoreleft = document.createElement('span');
-  var $scoreright = document.createElement('span');
-  var $newgame = document.createElement('div');
-  var $levels = document.createElement('span');
+  var $game = el('div', { class: 'game' });
+  var $container = el('div', { class: 'container' });
+  var $score = el('p', { class: 'score' });
+  var $scoreleft = el('span', { style: { float: 'left' } });
+  var $scoreright = el('span', { style: { float: 'right' } });
+  var $newgame = el('div', { class: 'newgame' });
+  var $levels = el('span');
   var $table = createTable(grid);
   var $cells = $table.querySelectorAll('td');
   var $ps = $table.querySelectorAll('td > p');
-
-  $scoreleft.style.float = 'left';
-  $scoreright.style.float = 'right';
-
-  $game.classList.add('game');
-  $score.classList.add('score');
-  $newgame.classList.add('newgame');
 
   $newgame.innerHTML = '<a href="#10,10,10">💣</a><a href="#15,15,40">💣💣</a><a href="#25,25,100">💣💣💣</a>';
 
@@ -27,7 +20,6 @@ function createGame (grid, cells) {
   $game.appendChild($container);
   $game.appendChild($newgame);
 
-  $container.classList.add('container');
   $container.appendChild($table);
 
   $game.oncontextmenu = function (e) {

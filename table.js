@@ -1,6 +1,6 @@
 
 function createTable (grid) {
-  var $table = document.createElement('table');
+  var $table = el('table');
 
   for (var y = 0; y < grid.length; y++) {
     row = grid[y];
