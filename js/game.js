@@ -11,7 +11,7 @@ function createGame (grid, cells) {
   var $cells = $table.querySelectorAll('td');
   var $ps = $table.querySelectorAll('td > p');
 
-  $newgame.innerHTML = '<a href="#10,10,10">💣</a><a href="#15,15,40">💣💣</a><a href="#25,25,100">💣💣💣</a>';
+  $newgame.innerHTML = '<a href="#">💣</a><a href="#15,15,40">💣💣</a><a href="#25,25,100">💣💣💣</a>';
 
   $score.appendChild($scoreleft);
   $score.appendChild($scoreright);
