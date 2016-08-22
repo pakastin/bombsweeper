@@ -11,7 +11,7 @@ function generateBombs (ROWS, COLS, BOMBS) {
     }
   }
 
-  bombs.sort(function (bomb) {
+  bombs.sort(function () {
     return Math.random() - .5
   });
 

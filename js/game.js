@@ -8,7 +8,7 @@ function createGame (grid, cells) {
   var $newgame = el('div', { class: 'newgame' });
   var $levels = el('span');
   var $table = createTable(grid);
-  var $cells = $table.querySelectorAll('td');
+  var $cells = Array.prototype.slice.call($table.querySelectorAll('td'));
   var $ps = $table.querySelectorAll('td > p');
 
   $newgame.innerHTML = '<a href="#">💣</a><a href="#15,15,40">💣💣</a><a href="#25,25,100">💣💣💣</a>';
