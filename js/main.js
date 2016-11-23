@@ -1,4 +1,6 @@
 
+var slice = Array.prototype.slice;
+
 start();
 
 window.addEventListener('hashchange', function () {
@@ -6,7 +8,7 @@ window.addEventListener('hashchange', function () {
 });
 
 function start () {
-  var $game = Array.prototype.slice.call(document.body.querySelectorAll('.game'));
+  var $game = slice.call(document.body.querySelectorAll('.game'));
   $game.forEach(function ($game) {
     document.body.removeChild($game);
   });
